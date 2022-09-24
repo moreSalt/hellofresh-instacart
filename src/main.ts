@@ -36,7 +36,7 @@ async function main () {
                 ]
             },
         ])
-        const ingredients: IngredientsArray[] = await hfRecipe(response.recipe, response.servings)
+        const ingredients: IngredientsArray[] = await hfRecipe(response.recipe.trim(), response.servings)
         await console.table(ingredients.map(i => {
             return {
                 type: i.type,
